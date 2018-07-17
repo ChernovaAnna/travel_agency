@@ -6,10 +6,11 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 @EqualsAndHashCode
 @ToString
 public class Country implements Identifier {
     private long id;
+    @NonNull
     private String name;
 }

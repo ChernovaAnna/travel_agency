@@ -2,24 +2,29 @@ package com.epam.agency.domain;
 
 
 import lombok.*;
-import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 @EqualsAndHashCode
 @ToString
 public class Tour implements Identifier {
     private long id;
     private String photo;
+    @NonNull
     private LocalDate date;
+    @NonNull
     private int duration;
     private String description;
+    @NonNull
     private double cost;
+    @NonNull
     private TourType tourType;
+    @NonNull
     private Hotel hotel;
+    @NonNull
     private Country country;
 }

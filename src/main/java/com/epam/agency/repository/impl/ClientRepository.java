@@ -2,8 +2,10 @@ package com.epam.agency.repository.impl;
 
 import com.epam.agency.domain.Client;
 import com.epam.agency.repository.IRepository;
+import org.postgresql.util.PSQLException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -23,7 +25,7 @@ public class ClientRepository implements IRepository<Client> {
 
     @Override
     public void create(Client entity) {
-        jdbcTemplate.update(ADD_CLIENT, entity.getLogin(), entity.getPassword());
+            jdbcTemplate.update(ADD_CLIENT, entity.getLogin(), entity.getPassword());
     }
 
     @Override
