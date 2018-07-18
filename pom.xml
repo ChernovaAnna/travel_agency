@@ -24,6 +24,10 @@
         <spring.ver>4.2.1.RELEASE</spring.ver>
         <pgsql.ver>42.1.1</pgsql.ver>
         <lombok.ver>1.16.6</lombok.ver>
+        <slf4j.version>1.7.25</slf4j.version>
+        <findbugs.ver>3.0.5</findbugs.ver>
+        <checkstyle.ver>2.17</checkstyle.ver>
+        <pmd.ver>3.9.0</pmd.ver>
     </properties>
 
     <dependencies>
@@ -58,6 +62,30 @@
             <version>${lombok.ver}</version>
             <scope>provided</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
     </dependencies>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>${findbugs.ver}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${checkstyle.ver}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>${pmd.ver}</version>
+            </plugin>
+        </plugins>
+    </reporting>
 </project>

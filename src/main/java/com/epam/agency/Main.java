@@ -67,6 +67,10 @@ public class Main {
 //        tour.setCountry(countryService.findById(1));
 //        tour.setHotel(hotelService.findById(6));
 //        tourService.create(tour);
-        reviewService.delete(reviewService.findById(5));
+        List<Client> clients=clientService.findAll();
+        for(Client client:clients){
+            System.out.println(client);
+        }
+
     }
 }

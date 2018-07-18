@@ -14,7 +14,9 @@ public enum Feature {
     ROOM_SERVICE("room service"),
     SELF_PARKING("self parking"),
     BUSINESS_CENTER("business center"),
-    AIRPORT_TRANSFER("airport transfer");
+    AIRPORT_TRANSFER("airport transfer"),
+    FITNESS_CENTER("fitness_center"),
+    HOTEL_SHOP("hotel_shop");
 
     @NonNull
     private String value;

@@ -4,7 +4,6 @@ import com.epam.agency.domain.Tour;
 import com.epam.agency.repository.impl.TourRepository;
 import com.epam.agency.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

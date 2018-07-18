@@ -12,7 +12,11 @@ public enum TourType {
     GASTRO("gastro"),
     WEDDING("wedding"),
     EXTREME("extreme"),
-    SHOPPING("shopping");
+    SHOPPING("shopping"),
+    ESCORTED("escorted"),
+    SIGHTSEEING("sightseeing"),
+    FESTIVAL("festival"),
+    BUS("bus");
 
     @NonNull
     private String value;
