@@ -18,11 +18,11 @@ import java.util.List;
 @Qualifier("clientRepository")
 public class ClientRepository implements IRepository<Client> {
     private final static Logger LOGGER = LoggerFactory.getLogger(ClientRepository.class);
-    private final static String FIND_ALL_CLIENTS = "SELECT * FROM agency.client";
-    private final static String ADD_CLIENT = "INSERT INTO agency.client (login,password) VALUES (?,?)";
-    private final static String UPDATE_CLIENT = "UPDATE agency.client SET login = ?,password=? WHERE id=?";
-    private final static String DELETE_CLIENT = "DELETE FROM agency.client WHERE id=?";
-    private final static String FIND_CLIENT_BY_ID = "SELECT * FROM agency.client WHERE id=?";
+    private final static String FIND_ALL_CLIENTS = "SELECT * FROM client";
+    private final static String ADD_CLIENT = "INSERT INTO client (login,password) VALUES (?,?)";
+    private final static String UPDATE_CLIENT = "UPDATE client SET login = ?,password=? WHERE id=?";
+    private final static String DELETE_CLIENT = "DELETE FROM client WHERE id=?";
+    private final static String FIND_CLIENT_BY_ID = "SELECT * FROM client WHERE id=?";
     @Autowired
     private JdbcTemplate jdbcTemplate;
 

@@ -1,15 +1,17 @@
 package com.epam.agency.config;
 
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackages = "com.epam.agency")
+@Profile("production")
+@ComponentScan(value = {"com.epam.agency.service", "com.epam.agency.repository"})
 @PropertySource(value = {"classpath:db.properties"})
 public class AppConfig {
     @Autowired
@@ -17,16 +19,16 @@ public class AppConfig {
 
     @Bean
     public DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(environment.getRequiredProperty("driver"));
-        dataSource.setUrl(environment.getRequiredProperty("url"));
-        dataSource.setUsername(environment.getRequiredProperty("user"));
-        dataSource.setPassword(environment.getRequiredProperty("password"));
-        return dataSource;
+        HikariConfig config = new HikariConfig();
+        config.setDriverClassName(environment.getRequiredProperty("driver"));
+        config.setJdbcUrl(environment.getRequiredProperty("url"));
+        config.setUsername(environment.getRequiredProperty("user"));
+        config.setPassword(environment.getRequiredProperty("password"));
+        return new HikariDataSource(config);
     }
 
     @Bean
-    public JdbcTemplate jdbcTemplate(DataSource dataSource){
+    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         jdbcTemplate.setResultsMapCaseInsensitive(true);
         return jdbcTemplate;

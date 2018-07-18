@@ -28,6 +28,10 @@
         <findbugs.ver>3.0.5</findbugs.ver>
         <checkstyle.ver>2.17</checkstyle.ver>
         <pmd.ver>3.9.0</pmd.ver>
+        <junit.ver>4.8</junit.ver>
+        <mockito.ver>1.10.19</mockito.ver>
+        <hsqldb.ver>2.3.2</hsqldb.ver>
+        <HikariCP.ver>3.2.0</HikariCP.ver>
     </properties>
 
     <dependencies>
@@ -66,6 +70,28 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.ver}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito.ver}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>${hsqldb.ver}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>${HikariCP.ver}</version>
         </dependency>
     </dependencies>
 

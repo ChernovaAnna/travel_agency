@@ -20,21 +20,21 @@ public class ReviewRepository implements IRepository<Review> {
             "t.cost,t.tour_type,c.id AS country_id," +
             " c.name AS country_name,h.id AS hotel_id,h.name AS hotel_name,h.stars,h.website,h.lalitude,h.longitude,h.features, " +
             "cl.id AS client_id, cl.login,cl.password "+
-            "FROM agency.review r JOIN agency.client cl ON r.client_id=cl.id "+
-            "JOIN agency.tour t ON r.tour_id=t.id "+
-            "JOIN agency.hotel h ON t.hotel_id = h.id "+
-            "JOIN agency.country c ON t.country_id=c.id";
+            "FROM review r JOIN agency.client cl ON r.client_id=cl.id "+
+            "JOIN tour t ON r.tour_id=t.id "+
+            "JOIN hotel h ON t.hotel_id = h.id "+
+            "JOIN country c ON t.country_id=c.id";
     private final static String FIND_REVIEW_BY_ID = "SELECT r.id,r.date AS review_date,r.text,t.id AS tour_id, t.photo,t.date AS tour_date,t.duration,t.description, " +
             "t.cost,t.tour_type,c.id AS country_id," +
             " c.name AS country_name,h.id AS hotel_id,h.name AS hotel_name,h.stars,h.website,h.lalitude,h.longitude,h.features, " +
             "cl.id AS client_id, cl.login,cl.password "+
-            "FROM agency.review r JOIN agency.client cl ON r.client_id=cl.id "+
-            "JOIN agency.tour t ON r.tour_id=t.id "+
-            "JOIN agency.hotel h ON t.hotel_id = h.id "+
-            "JOIN agency.country c ON t.country_id=c.id WHERE r.id=?";
-    private static final String DELETE_REVIEW = "DELETE FROM agency.review WHERE id=?";
-    private static final String ADD_REVIEW = "INSERT INTO agency.review (date,text,client_id,tour_id) VALUES (?,?,?,?)";
-    private static final String UPDATE_REVIEW = "UPDATE agency.review SET date=?,text=?,client_id=?,tour_id=? WHERE id=?";
+            "FROM review r JOIN client cl ON r.client_id=cl.id "+
+            "JOIN tour t ON r.tour_id=t.id "+
+            "JOIN hotel h ON t.hotel_id = h.id "+
+            "JOIN country c ON t.country_id=c.id WHERE r.id=?";
+    private static final String DELETE_REVIEW = "DELETE FROM review WHERE id=?";
+    private static final String ADD_REVIEW = "INSERT INTO review (date,text,client_id,tour_id) VALUES (?,?,?,?)";
+    private static final String UPDATE_REVIEW = "UPDATE review SET date=?,text=?,client_id=?,tour_id=? WHERE id=?";
 
     @Autowired
     private JdbcTemplate jdbcTemplate;

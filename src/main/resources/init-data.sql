@@ -1,7 +1,7 @@
 --to fill agency.client table
-INSERT INTO agency.client (login, password) VALUES ('opile0', 'bharbert0');
-INSERT INTO agency.client (login, password) VALUES ('iubsdall1', 'eandersen1');
-INSERT INTO agency.client (login, password) VALUES ('mstrewther2', 'mdykas2');
+INSERT INTO client (login, password) VALUES ('opile0', 'bharbert0');
+INSERT INTO client (login, password) VALUES ('iubsdall1', 'eandersen1');
+INSERT INTO client (login, password) VALUES ('mstrewther2', 'mdykas2');
 INSERT INTO agency.client (login, password) VALUES ('ggooderick3', 'ascrinage3');
 INSERT INTO agency.client (login, password) VALUES ('frembrandt4', 'pfrancom4');
 INSERT INTO agency.client (login, password) VALUES ('bwillder5', 'ahearthfield5');
