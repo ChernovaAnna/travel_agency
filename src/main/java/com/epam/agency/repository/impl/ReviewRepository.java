@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Date;
 import java.util.List;
 
 @Repository
@@ -20,7 +21,7 @@ public class ReviewRepository implements IRepository<Review> {
             "t.cost,t.tour_type,c.id AS country_id," +
             " c.name AS country_name,h.id AS hotel_id,h.name AS hotel_name,h.stars,h.website,h.lalitude,h.longitude,h.features, " +
             "cl.id AS client_id, cl.login,cl.password "+
-            "FROM review r JOIN agency.client cl ON r.client_id=cl.id "+
+            "FROM review r JOIN client cl ON r.client_id=cl.id "+
             "JOIN tour t ON r.tour_id=t.id "+
             "JOIN hotel h ON t.hotel_id = h.id "+
             "JOIN country c ON t.country_id=c.id";
@@ -42,13 +43,13 @@ public class ReviewRepository implements IRepository<Review> {
     @Override
     public void create(Review entity) {
         LOGGER.info("add review");
-        jdbcTemplate.update(ADD_REVIEW, entity.getDate(), entity.getText(), entity.getClient().getId(), entity.getTour().getId());
+        jdbcTemplate.update(ADD_REVIEW, Date.valueOf(entity.getDate()), entity.getText(), entity.getClient().getId(), entity.getTour().getId());
     }
 
     @Override
     public void update(Review entity) {
         LOGGER.info("update review");
-        jdbcTemplate.update(UPDATE_REVIEW, entity.getDate(), entity.getText(), entity.getClient().getId(), entity.getTour().getId(),entity.getId());
+        jdbcTemplate.update(UPDATE_REVIEW, Date.valueOf(entity.getDate()), entity.getText(), entity.getClient().getId(), entity.getTour().getId(),entity.getId());
 
     }
 

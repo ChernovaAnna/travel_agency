@@ -2,24 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09dca7d7-ccd7-47e9-a7c6-437aec064be4" name="Default" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/agency/config/TestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/init-test-data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/agency/config/InitBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/drop-schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/agency/repository/ClientRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/agency/repository/CountryRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/agency/repository/HotelRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/agency/repository/ReviewRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/agency/repository/TourRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/agency/service/ClientServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/agency/service/CountryServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/agency/service/HotelServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/agency/service/ReviewServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/agency/service/TourServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/agency/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/agency/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/agency/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/agency/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/agency/config/DBConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/ClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/CountryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/CountryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/HotelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/HotelRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/agency/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/agency/config/TestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/agency/config/TestConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/ReviewRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/TourRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/TourRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/init-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/init-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/agency/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/agency/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/agency/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/agency/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/agency/config/DBConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/agency/repository/impl/ClientRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/agency/repository/impl/ClientRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/init-test-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/init-test-data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/agency/Main.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,17 +51,17 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+            <state relative-caret-position="357">
+              <caret line="64" column="43" lean-forward="true" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/Main.java">
+      <file leaf-file-name="ClientServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/service/ClientServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+            <state relative-caret-position="1054">
+              <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,22 +69,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/config/AppConfig.java">
+      <file leaf-file-name="CountryServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/service/CountryServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="154">
+              <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/config/TestConfig.java">
+      <file leaf-file-name="HotelServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/service/HotelServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReviewServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/service/ReviewServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -91,65 +102,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TourServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/service/TourServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="drop-schema.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/drop-schema.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="init-test-data.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/init-test-data.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="141" selection-start-line="22" selection-start-column="141" selection-end-line="22" selection-end-column="141" />
+            <state relative-caret-position="329">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/ClientRepository.java">
+      <file leaf-file-name="InitBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/config/InitBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+            <state relative-caret-position="350">
+              <caret line="77" selection-start-line="69" selection-end-line="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CountryRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/CountryRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HotelRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/HotelRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="init-data.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/init-data.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="106" selection-start-line="106" selection-end-line="107" />
             </state>
           </provider>
         </entry>
@@ -169,12 +156,24 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Client newclient \= new Client\(\&quot;kovalev\&quot;\,\&quot;client\&quot;\)\;\n        clientService\.create\(newclient\)\;\n        List\&lt;Client\&gt; clients \=clientService\.findAll\(\)\;\n        for\(Client client\:clients\)\{\n            System\.out\.println\(client\)\;\n\/\/            client\.setPassword\(\&quot;client\&quot;\)\;\n\/\/            clientService\.update\(client\)\;\n            if\(client\.getId\(\)\=\=7\)\{\n                clientService\.delete\(client\)\;\n            \}\n        \}\n        List\&lt;Hotel\&gt; hotels \=hotelService\.findAll\(\)\;\n        for\(Hotel hotel\:hotels\)\{\n            System\.out\.println\(hotel\)\;\n        \}\n</find>
-      <find>Client</find>
       <find>2.4</find>
+      <find>country</find>
+      <find>hotel</find>
+      <find>client</find>
+      <find>Country</find>
+      <find>Hotel</find>
+      <find>Client</find>
+      <find>Review</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>country</replace>
+      <replace>Tour</replace>
+      <replace>Country</replace>
       <replace>Hotel</replace>
+      <replace>hotel</replace>
+      <replace>review</replace>
+      <replace>tour</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -188,10 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Entity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Identifier.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/service/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/service/IService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/service/Main.java" />
@@ -217,16 +212,31 @@
         <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/domain/TourType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/config/DBConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/config/AppConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/config/TestConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/ClientRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/init-data.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/CountryRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/HotelRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/TourRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/ReviewRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/init-test-data.sql" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/rservice/ClientServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/service/TestClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/service/ClientServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/util/InitBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/config/TestConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/drop-schema.sql" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/repository/HotelRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/repository/ClientRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/repository/CountryRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/ReviewRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/repository/ReviewRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/config/InitBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/TourRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/repository/TourRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/init-test-data.sql" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/service/CountryServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/service/HotelServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/service/ReviewServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/agency/service/TourServiceTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
@@ -238,6 +248,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/apache-maven-3.5.4" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -256,6 +271,17 @@
           <item name="travel_agency" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="travel_agency" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="travel_agency" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="compiler" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
       </expand>
       <select />
     </treeState>
@@ -264,9 +290,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="949" />
-    <option name="width" value="980" />
-    <option name="height" value="1031" />
+    <option name="x" value="-7" />
+    <option name="width" value="1002" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -318,15 +344,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="agency" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="travel_agency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="travel_agency" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="agency" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="travel_agency" type="b2602c69:ProjectViewProjectNode" />
@@ -405,6 +422,32 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="travel_agency" type="b2602c69:ProjectViewProjectNode" />
+              <item name="travel_agency" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="agency" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="travel_agency" type="b2602c69:ProjectViewProjectNode" />
+              <item name="travel_agency" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="agency" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="travel_agency" type="b2602c69:ProjectViewProjectNode" />
+              <item name="travel_agency" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="agency" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -416,8 +459,8 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="HSQLDB (Local)&#10;H2" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../traveling" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="C:/idea-gitignore/lib/idea-gitignore-2.6.2.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -427,6 +470,8 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.epam.agency.service" />
+      <recent name="com.epam.agency.repository" />
       <recent name="com.epam.agency.repository.mapper" />
       <recent name="com.epam.agency.repository.impl" />
       <recent name="com.epam.agency.service.impl" />
@@ -447,20 +492,124 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.epam.agency.Main" />
-      <module name="travel_agency" />
+  <component name="RunManager" selected="JUnit.TourServiceTest">
+    <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="ClientServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="travel_agency" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.agency.*" />
+          <option name="PATTERN" value="com.epam.agency.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.epam.agency.service" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.agency.service.ClientServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration name="CountryServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="travel_agency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.agency.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.epam.agency.service" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.agency.service.CountryServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="HotelServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="travel_agency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.agency.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.epam.agency.service" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.agency.service.HotelServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ReviewServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="travel_agency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.agency.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.epam.agency.service" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.agency.service.ReviewServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TourServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="travel_agency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.agency.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.epam.agency.service" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.agency.service.TourServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -500,9 +649,20 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="JUnit.ClientServiceTest" />
+      <item itemvalue="JUnit.CountryServiceTest" />
+      <item itemvalue="JUnit.HotelServiceTest" />
+      <item itemvalue="JUnit.ReviewServiceTest" />
+      <item itemvalue="JUnit.TourServiceTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TourServiceTest" />
+        <item itemvalue="JUnit.ReviewServiceTest" />
+        <item itemvalue="JUnit.HotelServiceTest" />
+        <item itemvalue="JUnit.CountryServiceTest" />
+        <item itemvalue="JUnit.ClientServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -520,7 +680,7 @@
       <workItem from="1531314788273" duration="16541000" />
       <workItem from="1531473187748" duration="81363000" />
       <workItem from="1531928819216" duration="4225000" />
-      <workItem from="1531945134531" duration="269000" />
+      <workItem from="1531945134531" duration="24519000" />
     </task>
     <task id="LOCAL-00001" summary="services+repositories">
       <created>1531864334467</created>
@@ -536,38 +696,79 @@
       <option name="project" value="LOCAL" />
       <updated>1531916378070</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=".">
+      <created>1531945418961</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1531945418961</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TourRepositoryTest_testUpdateTour - 2018.07.20 at 12h 34m 21s.xml">
+      <configuration name="TourRepositoryTest.testUpdateTour" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TourRepositoryTest_testUpdateTour - 2018.07.20 at 12h 34m 38s.xml">
+      <configuration name="TourRepositoryTest.testUpdateTour" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TourRepositoryTest_testCreateTour - 2018.07.20 at 12h 34m 44s.xml">
+      <configuration name="TourRepositoryTest.testCreateTour" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TourRepositoryTest - 2018.07.20 at 12h 34m 51s.xml">
+      <configuration name="TourRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClientServiceTest - 2018.07.20 at 12h 39m 25s.xml">
+      <configuration name="ClientServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CountryServiceTest - 2018.07.20 at 12h 48m 58s.xml">
+      <configuration name="CountryServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HotelServiceTest - 2018.07.20 at 12h 53m 35s.xml">
+      <configuration name="HotelServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HotelServiceTest - 2018.07.20 at 12h 53m 41s.xml">
+      <configuration name="HotelServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ReviewServiceTest - 2018.07.20 at 12h 57m 12s.xml">
+      <configuration name="ReviewServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TourServiceTest - 2018.07.20 at 12h 59m 28s.xml">
+      <configuration name="TourServiceTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104682000" />
+    <option name="totallyTimeSpent" value="128932000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.27044535" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.34573305" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.4197761" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.3283582" />
-      <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3283582" />
       <window_info id="Capture Tool" order="3" />
+      <window_info anchor="bottom" id="TypeScript" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26639676" />
       <window_info anchor="right" id="Database" order="6" weight="0.23481782" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3985122" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.4301676" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.40335196" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3283582" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3283582" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16257995" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.4314559" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
@@ -575,7 +776,6 @@
       <window_info anchor="right" id="CDI" order="9" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Find" order="2" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,160 +791,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Review.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Tour.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Identifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Hotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Feature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/TourType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Entity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Identifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/exception/ServiceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/exception/RepositoryException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.2.1.RELEASE/spring-core-4.2.1.RELEASE.jar!/org/springframework/util/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/repository/IRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Hotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/service/impl/CountryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/service/impl/HotelService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/domain/Tour.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -776,13 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/service/impl/ReviewService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -826,13 +869,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/config/DBConfig.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/service/impl/TourService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -850,45 +886,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/service/impl/ClientService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/service/IService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/ReviewRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/TourRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -915,47 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/ClientRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/init-data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" selection-start-line="106" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/init-test-data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="141" selection-start-line="22" selection-start-column="141" selection-end-line="22" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/config/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -966,9 +926,228 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/epam/agency/config/AppConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/epam/agency/repository/impl/ClientRepository.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/epam/agency/Main.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528">
+          <folding>
+            <element signature="e#0#1803#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1683" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/service/impl/CountryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/service/impl/HotelService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/service/impl/ReviewService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/service/impl/TourService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/service/impl/ClientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/service/TestClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/ClientRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/config/TestConfig.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="104" selection-start-line="15" selection-start-column="104" selection-end-line="15" selection-end-column="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/init-data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="106" selection-start-line="106" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/repository/HotelRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="48" selection-start-line="46" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/repository/ClientRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/repository/CountryRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/ReviewRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/repository/impl/TourRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="44" column="89" selection-start-line="44" selection-start-column="89" selection-end-line="44" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/repository/ReviewRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/repository/TourRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="56" column="64" selection-start-line="56" selection-start-column="64" selection-end-line="56" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/init-test-data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/service/ClientServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/service/CountryServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/service/HotelServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/drop-schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/service/ReviewServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -976,10 +1155,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/config/InitBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="77" selection-start-line="69" selection-end-line="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/agency/service/TourServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/agency/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="35" selection-start-line="24" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git.ignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="357">
+          <caret line="64" column="43" lean-forward="true" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1047,7 +1259,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <last-edited>idea-gitignore-2.6.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Date;
 import java.util.List;
 
 @Repository
@@ -35,13 +36,13 @@ public class TourRepository implements IRepository<Tour> {
     @Override
     public void create(Tour entity) {
         LOGGER.info("add tour");
-        jdbcTemplate.update(ADD_TOUR, entity.getPhoto(), entity.getDate(), entity.getDuration(), entity.getDescription(), entity.getCost(), entity.getTourType().getValue(), entity.getHotel().getId(), entity.getCountry().getId());
+        jdbcTemplate.update(ADD_TOUR, entity.getPhoto(),Date.valueOf(entity.getDate()), entity.getDuration(), entity.getDescription(), entity.getCost(), entity.getTourType().getValue(), entity.getHotel().getId(), entity.getCountry().getId());
     }
 
     @Override
     public void update(Tour entity) {
         LOGGER.info("update tour");
-        jdbcTemplate.update(UPDATE_TOUR, entity.getPhoto(), entity.getDate(), entity.getDuration(), entity.getDescription(), entity.getCost(), entity.getTourType().getValue(), entity.getHotel().getId(), entity.getCountry().getId(), entity.getId());
+        jdbcTemplate.update(UPDATE_TOUR, entity.getPhoto(),Date.valueOf(entity.getDate()), entity.getDuration(), entity.getDescription(), entity.getCost(), entity.getTourType().getValue(), entity.getHotel().getId(), entity.getCountry().getId(), entity.getId());
     }
 
     @Override

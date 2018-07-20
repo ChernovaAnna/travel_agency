@@ -21,16 +21,16 @@
     </build>
 
     <properties>
-        <spring.ver>4.2.1.RELEASE</spring.ver>
-        <pgsql.ver>42.1.1</pgsql.ver>
+        <spring.ver>4.3.18.RELEASE</spring.ver>
+        <pgsql.ver>9.4.1212</pgsql.ver>
         <lombok.ver>1.16.6</lombok.ver>
         <slf4j.version>1.7.25</slf4j.version>
         <findbugs.ver>3.0.5</findbugs.ver>
-        <checkstyle.ver>2.17</checkstyle.ver>
-        <pmd.ver>3.9.0</pmd.ver>
-        <junit.ver>4.8</junit.ver>
+        <checkstyle.ver>3.0.0</checkstyle.ver>
+        <pmd.ver>3.10.0</pmd.ver>
+        <junit.ver>4.12</junit.ver>
         <mockito.ver>1.10.19</mockito.ver>
-        <hsqldb.ver>2.3.2</hsqldb.ver>
+        <hsqldb.ver>2.4.1</hsqldb.ver>
         <HikariCP.ver>3.2.0</HikariCP.ver>
     </properties>
 

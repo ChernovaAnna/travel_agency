@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @Profile("development")
-@ComponentScan(value = {"com.epam.agency.service", "com.epam.agency.repository"})
+@ComponentScan(value = {"com.epam.agency.service", "com.epam.agency.repository", "com.epam.agency.config"})
 public class TestConfig {
 
     @Bean
