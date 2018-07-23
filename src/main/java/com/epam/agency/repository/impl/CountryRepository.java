@@ -16,8 +16,8 @@ import java.util.List;
 @Qualifier("countryRepository")
 public class CountryRepository implements IRepository<Country> {
     private final static Logger LOGGER = LoggerFactory.getLogger(CountryRepository.class);
-    private final static String FIND_ALL_COUNTRIES = "SELECT * FROM country";
-    private final static String FIND_COUNTRY_BY_ID = "SELECT * FROM country WHERE id=?";
+    private final static String FIND_ALL_COUNTRIES = "SELECT c.id,c.name FROM country c";
+    private final static String FIND_COUNTRY_BY_ID = "SELECT c.id,c.name FROM country c WHERE c.id=?";
     private final static String DELETE_COUNTRY = "DELETE FROM country WHERE id=?";
     private final static String UPDATE_COUNTRY = "UPDATE country SET name=? WHERE id=?";
     private final static String ADD_COUNTRY = "INSERT INTO country (name) VALUES (?)";

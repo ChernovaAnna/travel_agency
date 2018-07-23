@@ -26,7 +26,6 @@ public class TourService implements IService<Tour> {
     @Override
     public void delete(Tour entity) {
         tourRepository.delete(entity);
-
     }
 
     @Override

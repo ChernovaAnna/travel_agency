@@ -16,8 +16,8 @@ import java.util.*;
 @Qualifier("hotelRepository")
 public class HotelRepository implements IRepository<Hotel> {
     private final static Logger LOGGER = LoggerFactory.getLogger(HotelRepository.class);
-    private final static String FIND_ALL_HOTELS = "SELECT * FROM hotel";
-    private final static String FIND_HOTEL_BY_ID = "SELECT * FROM hotel WHERE id=?";
+    private final static String FIND_ALL_HOTELS = "SELECT h.id,h.name,h.stars,h.website,h.lalitude,h.longitude,h.features FROM hotel h";
+    private final static String FIND_HOTEL_BY_ID = "SELECT h.id,h.name,h.stars,h.website,h.lalitude,h.longitude,h.features FROM hotel h WHERE id=?";
     private static final String DELETE_HOTEL = "DELETE FROM hotel WHERE id=?";
     private static final String ADD_HOTEL = "INSERT INTO hotel (name,stars,website,lalitude,longitude,features) VALUES (?,?,?,?,?,?)";
     private static final String UPDATE_HOTEL = "UPDATE hotel SET name=?,stars=?,website=?,lalitude=?,longitude=?,features=? WHERE id=?";

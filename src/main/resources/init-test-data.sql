@@ -21,10 +21,10 @@ INSERT INTO tour VALUES (3,'wgjcozn.png', '2017-08-18', 102, 'Pellentesque ultri
 
 --to fill agency.tour table
 INSERT INTO review VALUES (1,'2017-10-28', 'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 1, 1);
-INSERT INTO review VALUES (2,'2018-04-30', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.', 2, 3);
+INSERT INTO review VALUES (2,'2018-04-30', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.', 3, 1);
 INSERT INTO review VALUES (3,'2018-01-18', 'Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh.', 3, 3);
 
 --to fill agency.client_tour table
-INSERT INTO client_tour VALUES (1, 3);
-INSERT INTO client_tour VALUES (2, 1);
+INSERT INTO client_tour VALUES (1, 1);
+INSERT INTO client_tour VALUES (1, 2);
 INSERT INTO client_tour VALUES (3, 2);

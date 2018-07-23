@@ -2,6 +2,8 @@ package com.epam.agency.domain;
 
 import lombok.*;
 
+import java.util.List;
+
 
 @Getter
 @Setter
@@ -15,4 +17,6 @@ public class Client implements Identifier {
     private String login;
     @NonNull
     private String password;
+    List<Tour> tours;
+    List<Review> reviews;
 }

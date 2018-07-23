@@ -4,6 +4,7 @@ package com.epam.agency.domain;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
@@ -27,4 +28,5 @@ public class Tour implements Identifier {
     private Hotel hotel;
     @NonNull
     private Country country;
+    private List<Client> clients;
 }
