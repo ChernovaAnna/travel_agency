@@ -12,6 +12,17 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+/**
+ * Implements IRepository interface and
+ * realizes it's methods. Used to work with
+ * hotels' information.
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ * Description of methods:
+ * @see IRepository
+ */
+
 @Repository
 @Qualifier("hotelRepository")
 public class HotelRepository implements IRepository<Hotel> {

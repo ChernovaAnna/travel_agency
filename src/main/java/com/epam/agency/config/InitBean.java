@@ -1,15 +1,20 @@
 package com.epam.agency.config;
 
 import com.epam.agency.domain.*;
-import org.omg.CORBA.CODESET_INCOMPATIBLE;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import sun.text.resources.et.FormatData_et;
 
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * Initialize beans for application tests.
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ */
 
 @Configuration
 public class InitBean {
@@ -23,6 +28,7 @@ public class InitBean {
         review.setTour(initTourForUpdate());
         return review;
     }
+
 
     @Bean(name = "reviewForUpdate")
     public Review initReviewForUpdate(){

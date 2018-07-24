@@ -8,24 +8,34 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Implements IService interface and
+ * realizes it's methods
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ * Description of methods:
+ * @see IService
+ */
+
 @Service("reviewService")
 public class ReviewService implements IService<Review> {
     @Autowired
     private ReviewRepository reviewRepository;
 
     @Override
-    public void create(Review entity) {
-        reviewRepository.create(entity);
+    public void create(Review review) {
+        reviewRepository.create(review);
     }
 
     @Override
-    public void update(Review entity) {
-        reviewRepository.update(entity);
+    public void update(Review review) {
+        reviewRepository.update(review);
     }
 
     @Override
-    public void delete(Review entity) {
-        reviewRepository.delete(entity);
+    public void delete(Review review) {
+        reviewRepository.delete(review);
     }
 
     @Override

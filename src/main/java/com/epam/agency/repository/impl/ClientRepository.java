@@ -6,17 +6,26 @@ import com.epam.agency.domain.Tour;
 import com.epam.agency.repository.IRepository;
 import com.epam.agency.repository.mapper.ReviewMapper;
 import com.epam.agency.repository.mapper.TourMapper;
-import org.postgresql.util.PSQLException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+
+/**
+ * Implements IRepository interface and
+ * realizes it's methods. Used to work with
+ * clients' information.
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ * Description of methods:
+ * @see IRepository
+ */
 
 @Repository
 @Qualifier("clientRepository")
@@ -31,18 +40,17 @@ public class ClientRepository implements IRepository<Client> {
             "t.cost,t.tour_type,c.id AS country_id," +
             "c.name AS country_name,h.id AS hotel_id,h.name AS hotel_name,h.stars,h.website,h.lalitude,h.longitude,h.features " +
             "FROM tour t " +
-            "JOIN client_tour ct ON t.id=ct.tour_id  JOIN client cl ON ct.client_id=cl.id "+
+            "JOIN client_tour ct ON t.id=ct.tour_id  JOIN client cl ON ct.client_id=cl.id " +
             "JOIN country c ON t.country_id=c.id " +
             "JOIN hotel h ON t.hotel_id = h.id WHERE cl.id=?";
     private final static String FIND_REVIEW_BY_CLIENT_ID = "SELECT r.id,r.date AS review_date,r.text,t.id AS tour_id, t.photo,t.date AS tour_date,t.duration,t.description, " +
             "t.cost,t.tour_type,c.id AS country_id," +
             " c.name AS country_name,h.id AS hotel_id,h.name AS hotel_name,h.stars,h.website,h.lalitude,h.longitude,h.features, " +
-            "cl.id AS client_id, cl.login,cl.password "+
-            "FROM review r JOIN client cl ON r.client_id=cl.id "+
-            "JOIN tour t ON r.tour_id=t.id "+
-            "JOIN hotel h ON t.hotel_id = h.id "+
+            "cl.id AS client_id, cl.login,cl.password " +
+            "FROM review r JOIN client cl ON r.client_id=cl.id " +
+            "JOIN tour t ON r.tour_id=t.id " +
+            "JOIN hotel h ON t.hotel_id = h.id " +
             "JOIN country c ON t.country_id=c.id WHERE cl.id=?";
-
 
 
     @Autowired

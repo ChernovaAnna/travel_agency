@@ -14,6 +14,17 @@ import org.springframework.stereotype.Repository;
 import java.sql.Date;
 import java.util.List;
 
+/**
+ * Implements IRepository interface and
+ * realizes it's methods. Used to work with
+ * tours' information.
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ * Description of methods:
+ * @see IRepository
+ */
+
 @Repository
 @Qualifier("tourRepository")
 public class TourRepository implements IRepository<Tour> {

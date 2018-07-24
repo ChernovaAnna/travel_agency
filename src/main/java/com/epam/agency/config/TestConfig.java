@@ -11,11 +11,23 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
 import javax.sql.DataSource;
 
+/**
+ * Configure application context for development process.
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ */
+
 @Configuration
 @Profile("development")
 @ComponentScan(value = {"com.epam.agency.service", "com.epam.agency.repository", "com.epam.agency.config"})
 public class TestConfig {
 
+    /**
+     * Initialize dataSource to embedded database
+     *
+     * @return initialized dataSource object
+     */
     @Bean
     public DataSource dataSource() {
         EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
@@ -27,6 +39,11 @@ public class TestConfig {
         return db;
     }
 
+    /**
+     *
+     * @param dataSource to embedded database
+     * @return jdbcTemplate object
+     */
     @Bean
     public JdbcTemplate jdbcTemplate(DataSource dataSource) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);

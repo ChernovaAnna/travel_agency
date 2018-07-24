@@ -8,24 +8,34 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Implements IService interface and
+ * realizes it's methods
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ * Description of methods:
+ * @see IService
+ */
+
 @Service("countryService")
 public class CountryService implements IService<Country> {
     @Autowired
     private CountryRepository countryRepository;
 
     @Override
-    public void create(Country entity) {
-        countryRepository.create(entity);
+    public void create(Country country) {
+        countryRepository.create(country);
     }
 
     @Override
-    public void update(Country entity) {
-        countryRepository.update(entity);
+    public void update(Country country) {
+        countryRepository.update(country);
     }
 
     @Override
-    public void delete(Country entity) {
-        countryRepository.delete(entity);
+    public void delete(Country country) {
+        countryRepository.delete(country);
     }
 
     @Override

@@ -9,9 +9,30 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Implements RowMapper interface and
+ * handle information about hotels
+ * fetched from database.
+ *
+ * Description of methods:
+ * @see RowMapper
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ */
+
 
 public class HotelMapper implements RowMapper<Hotel> {
 
+    /**
+     * Create Hotel object and initialize it
+     * by data from database
+     *
+     * @param resultSet
+     * @param i
+     * @return Hotel object initialized by information fetched from database
+     * @throws SQLException when appeal to resultSet is incorrect
+     */
     @Override
     public Hotel mapRow(ResultSet resultSet, int i) throws SQLException {
         Hotel hotel = new Hotel();

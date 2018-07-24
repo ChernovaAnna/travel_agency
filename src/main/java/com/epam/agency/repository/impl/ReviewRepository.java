@@ -6,12 +6,22 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Date;
 import java.util.List;
+
+/**
+ * Implements IRepository interface and
+ * realizes it's methods. Used to work with
+ * reviews' information.
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ * Description of methods:
+ * @see IRepository
+ */
 
 @Repository
 @Qualifier("reviewRepository")

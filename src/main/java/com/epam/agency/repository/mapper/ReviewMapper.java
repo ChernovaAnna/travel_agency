@@ -8,9 +8,29 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Implements RowMapper interface and
+ * handle information about reviews
+ * fetched from database.
+ *
+ * Description of methods:
+ * @see RowMapper
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ */
 
 public class ReviewMapper implements RowMapper<Review> {
 
+    /**
+     * Create Review object and initialize it
+     * by data from database
+     *
+     * @param resultSet
+     * @param i
+     * @return Review object initialized by information fetched from database
+     * @throws SQLException when appeal to resultSet is incorrect
+     */
     @Override
     public Review mapRow(ResultSet resultSet, int i) throws SQLException {
         Review review = new Review();

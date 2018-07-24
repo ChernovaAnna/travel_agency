@@ -12,6 +12,17 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Implements IRepository interface and
+ * realizes it's methods. Used to work with
+ * countries' information.
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ * Description of methods:
+ * @see IRepository
+ */
+
 @Repository
 @Qualifier("countryRepository")
 public class CountryRepository implements IRepository<Country> {

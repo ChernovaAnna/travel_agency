@@ -8,7 +8,29 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Implements RowMapper interface and
+ * handle information about tours
+ * fetched from database.
+ *
+ * Description of methods:
+ * @see RowMapper
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ */
+
 public class TourMapper implements RowMapper<Tour> {
+
+    /**
+     * Create Tour object and initialize it
+     * by data from database
+     *
+     * @param resultSet
+     * @param i
+     * @return Tour object initialized by information fetched from database
+     * @throws SQLException when appeal to resultSet is incorrect
+     */
     @Override
     public Tour mapRow(ResultSet resultSet, int i) throws SQLException {
         Tour tour = new Tour();

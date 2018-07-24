@@ -4,6 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NonNull;
 
+/**
+ * Stores hotel features.
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ */
+
 @Getter
 @AllArgsConstructor
 public enum Feature {
@@ -18,6 +25,9 @@ public enum Feature {
     FITNESS_CENTER("fitness_center"),
     HOTEL_SHOP("hotel_shop");
 
+    /**
+     * Value of enum feature
+     */
     @NonNull
     private String value;
 }

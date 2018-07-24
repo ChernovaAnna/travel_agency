@@ -8,24 +8,34 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Implements IService interface and
+ * realizes it's methods
+ *
+ * @author Hanna_Charnova
+ * @version 1.0
+ * Description of methods:
+ * @see IService
+ */
+
 @Service("tourService")
 public class TourService implements IService<Tour> {
     @Autowired
     private TourRepository tourRepository;
 
     @Override
-    public void create(Tour entity) {
-        tourRepository.create(entity);
+    public void create(Tour tour) {
+        tourRepository.create(tour);
     }
 
     @Override
-    public void update(Tour entity) {
-        tourRepository.update(entity);
+    public void update(Tour tour) {
+        tourRepository.update(tour);
     }
 
     @Override
-    public void delete(Tour entity) {
-        tourRepository.delete(entity);
+    public void delete(Tour tour) {
+        tourRepository.delete(tour);
     }
 
     @Override
