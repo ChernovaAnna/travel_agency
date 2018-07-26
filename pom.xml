@@ -27,7 +27,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.1</version>
+                <version>${jacoco.ver}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -66,9 +66,16 @@
         <mockito.ver>1.10.19</mockito.ver>
         <hsqldb.ver>2.4.1</hsqldb.ver>
         <HikariCP.ver>3.2.0</HikariCP.ver>
+        <hibernate.ver>5.3.3.Final</hibernate.ver>
+        <jacoco.ver>0.8.1</jacoco.ver>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.ver}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
