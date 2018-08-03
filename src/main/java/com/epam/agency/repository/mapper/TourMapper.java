@@ -34,7 +34,7 @@ public class TourMapper implements RowMapper<Tour> {
     @Override
     public Tour mapRow(ResultSet resultSet, int i) throws SQLException {
         Tour tour = new Tour();
-        tour.setId(resultSet.getInt("id"));
+        tour.setId(resultSet.getLong("id"));
         tour.setPhoto(resultSet.getString("photo"));
         tour.setDate(resultSet.getDate("date").toLocalDate());
         tour.setDuration(resultSet.getInt("duration"));
@@ -43,7 +43,7 @@ public class TourMapper implements RowMapper<Tour> {
         tour.setTourType(TourType.valueOf(resultSet.getString("tour_type").toUpperCase()));
 
         Hotel hotel = new Hotel();
-        hotel.setId(resultSet.getInt("hotel_id"));
+        hotel.setId(resultSet.getLong("hotel_id"));
         hotel.setName(resultSet.getString("hotel_name"));
         hotel.setStars(resultSet.getInt("stars"));
         hotel.setWebsite(resultSet.getString("website"));
@@ -58,7 +58,7 @@ public class TourMapper implements RowMapper<Tour> {
         tour.setHotel(hotel);
 
         Country country = new Country();
-        country.setId(resultSet.getInt("country_id"));
+        country.setId(resultSet.getLong("country_id"));
         country.setName(resultSet.getString("country_name"));
         tour.setCountry(country);
         return tour;

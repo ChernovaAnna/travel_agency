@@ -1,11 +1,12 @@
 package com.epam.agency.domain;
 
-
+import com.epam.agency.repository.mapper.TourTypeConverter;
 import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
+
 
 /**
  * Stores information about tours.
@@ -17,6 +18,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "tour")
+@NamedQueries({
+        @NamedQuery(name = Tour.FIND_TOUR_BY_ID, query = "FROM Tour t WHERE t.id=:id"),
+        @NamedQuery(name = Tour.DELETE_TOUR, query = "DELETE FROM Tour t WHERE t.id=:id")
+})
 @Getter
 @Setter
 @NoArgsConstructor
@@ -24,12 +29,16 @@ import java.util.List;
 @EqualsAndHashCode
 @ToString
 public class Tour implements Identifier {
+    public final static String FIND_TOUR_BY_ID = "findTourById";
+    public final static String DELETE_TOUR = "deleteTour";
 
     /**
      * Unique id of the tour
      */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private long id;
+    private Long id;
     /**
      * Photo of the tour
      */
@@ -66,8 +75,8 @@ public class Tour implements Identifier {
     /**
      * Type of the tour
      */
-    @Enumerated(EnumType.STRING)
     @Column(name = "tour_type")
+    @Convert(converter = TourTypeConverter.class)
     @NonNull
     private TourType tourType;
 
@@ -94,7 +103,7 @@ public class Tour implements Identifier {
     @ManyToMany
     @JoinTable(
             name = "client_tour",
-            joinColumns = @JoinColumn(name = "tour_id", referencedColumnName = "ID"),
-            inverseJoinColumns = @JoinColumn(name = "client_id", referencedColumnName = "ID"))
+            joinColumns = @JoinColumn(name = "tour_id"),
+            inverseJoinColumns = @JoinColumn(name = "client_id"))
     private List<Client> clients;
 }

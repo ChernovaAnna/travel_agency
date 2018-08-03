@@ -15,6 +15,11 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "review")
+@NamedQueries({
+        @NamedQuery(name = Review.FIND_REVIEW_BY_ID, query = "FROM Review c WHERE c.id=:id"),
+        @NamedQuery(name = Review.DELETE_REVIEW, query = "DELETE FROM Review c WHERE c.id=:id")
+})
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -22,10 +27,14 @@ import java.time.LocalDate;
 @EqualsAndHashCode
 @ToString
 public class Review implements Identifier {
+    public final static String FIND_REVIEW_BY_ID = "findReviewById";
+    public final static String DELETE_REVIEW = "deleteReview";
 
     /**
      * Unique id of the review
      */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private long id;
 

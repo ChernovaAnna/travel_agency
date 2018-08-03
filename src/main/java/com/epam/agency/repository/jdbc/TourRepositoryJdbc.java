@@ -1,6 +1,7 @@
-package com.epam.agency.repository.impl;
+package com.epam.agency.repository.jdbc;
 
-import com.epam.agency.domain.*;
+import com.epam.agency.domain.Client;
+import com.epam.agency.domain.Tour;
 import com.epam.agency.repository.IRepository;
 import com.epam.agency.repository.mapper.TourMapper;
 import org.slf4j.Logger;
@@ -27,8 +28,8 @@ import java.util.List;
 
 @Repository
 @Qualifier("tourRepository")
-public class TourRepository implements IRepository<Tour> {
-    private final static Logger LOGGER = LoggerFactory.getLogger(TourRepository.class);
+public class TourRepositoryJdbc implements IRepository<Tour> {
+    private final static Logger LOGGER = LoggerFactory.getLogger(TourRepositoryJdbc.class);
     private final static String FIND_ALL_TOURS = "SELECT t.id, photo,date,duration,description," +
             "cost,tour_type,c.id AS country_id," +
             " c.name AS country_name,h.id AS hotel_id,h.name AS hotel_name,h.stars,h.website,h.lalitude,h.longitude,h.features " +
@@ -49,13 +50,13 @@ public class TourRepository implements IRepository<Tour> {
     @Override
     public void create(Tour entity) {
         LOGGER.info("add tour");
-        jdbcTemplate.update(ADD_TOUR, entity.getPhoto(),Date.valueOf(entity.getDate()), entity.getDuration(), entity.getDescription(), entity.getCost(), entity.getTourType().getValue(), entity.getHotel().getId(), entity.getCountry().getId());
+        jdbcTemplate.update(ADD_TOUR, entity.getPhoto(), Date.valueOf(entity.getDate()), entity.getDuration(), entity.getDescription(), entity.getCost(), entity.getTourType().getValue(), entity.getHotel().getId(), entity.getCountry().getId());
     }
 
     @Override
     public void update(Tour entity) {
         LOGGER.info("update tour");
-        jdbcTemplate.update(UPDATE_TOUR, entity.getPhoto(),Date.valueOf(entity.getDate()), entity.getDuration(), entity.getDescription(), entity.getCost(), entity.getTourType().getValue(), entity.getHotel().getId(), entity.getCountry().getId(), entity.getId());
+        jdbcTemplate.update(UPDATE_TOUR, entity.getPhoto(), Date.valueOf(entity.getDate()), entity.getDuration(), entity.getDescription(), entity.getCost(), entity.getTourType().getValue(), entity.getHotel().getId(), entity.getCountry().getId(), entity.getId());
     }
 
     @Override
@@ -72,10 +73,10 @@ public class TourRepository implements IRepository<Tour> {
     }
 
     @Override
-    public Tour findById(int id) {
+    public Tour findById(Long id) {
         LOGGER.info("find tour by id");
         Tour tour = jdbcTemplate.queryForObject(FIND_TOUR_BY_ID, new Object[]{id}, new TourMapper());
-        List<Client> clients = jdbcTemplate.query(FIND_CLIENT_BY_TOUR_ID,new Object[] {id}, new BeanPropertyRowMapper<>(Client.class));
+        List<Client> clients = jdbcTemplate.query(FIND_CLIENT_BY_TOUR_ID, new Object[]{id}, new BeanPropertyRowMapper<>(Client.class));
         tour.setClients(clients);
         return tour;
 

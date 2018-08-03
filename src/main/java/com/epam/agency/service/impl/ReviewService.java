@@ -1,7 +1,7 @@
 package com.epam.agency.service.impl;
 
 import com.epam.agency.domain.Review;
-import com.epam.agency.repository.impl.ReviewRepository;
+import com.epam.agency.repository.jpa.ReviewRepository;
 import com.epam.agency.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,7 +44,7 @@ public class ReviewService implements IService<Review> {
     }
 
     @Override
-    public Review findById(int id) {
+    public Review findById(Long id) {
         return reviewRepository.findById(id);
     }
 }

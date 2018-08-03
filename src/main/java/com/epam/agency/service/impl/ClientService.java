@@ -1,7 +1,7 @@
 package com.epam.agency.service.impl;
 
 import com.epam.agency.domain.Client;
-import com.epam.agency.repository.impl.ClientRepository;
+import com.epam.agency.repository.jpa.ClientRepository;
 import com.epam.agency.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,7 +44,7 @@ public class ClientService implements IService<Client> {
     }
 
     @Override
-    public Client findById(int id) {
+    public Client findById(Long id) {
         return clientRepository.findById(id);
     }
 }

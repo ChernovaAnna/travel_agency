@@ -1,4 +1,4 @@
-package com.epam.agency.repository.impl;
+package com.epam.agency.repository.jdbc;
 
 import com.epam.agency.domain.Client;
 import com.epam.agency.domain.Review;
@@ -26,11 +26,10 @@ import java.util.List;
  * Description of methods:
  * @see IRepository
  */
-
 @Repository
 @Qualifier("clientRepository")
-public class ClientRepository implements IRepository<Client> {
-    private final static Logger LOGGER = LoggerFactory.getLogger(ClientRepository.class);
+public class ClientRepositoryJdbc implements IRepository<Client> {
+    private final static Logger LOGGER = LoggerFactory.getLogger(ClientRepositoryJdbc.class);
     private final static String FIND_ALL_CLIENTS = "SELECT id, login,password FROM client";
     private final static String ADD_CLIENT = "INSERT INTO client (login,password) VALUES (?,?)";
     private final static String UPDATE_CLIENT = "UPDATE client SET login = ?,password=? WHERE id=?";
@@ -82,7 +81,7 @@ public class ClientRepository implements IRepository<Client> {
     }
 
     @Override
-    public Client findById(int id) {
+    public Client findById(Long id) {
         LOGGER.info("find client by id");
         Client client = (Client) jdbcTemplate.queryForObject(FIND_CLIENT_BY_ID, new Object[]{id}, new BeanPropertyRowMapper(Client.class));
         List<Tour> tours = jdbcTemplate.query(FIND_TOUR_BY_CLIENT_ID, new Object[]{id}, new TourMapper());

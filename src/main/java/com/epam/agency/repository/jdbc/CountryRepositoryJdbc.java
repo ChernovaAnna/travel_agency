@@ -1,4 +1,4 @@
-package com.epam.agency.repository.impl;
+package com.epam.agency.repository.jdbc;
 
 import com.epam.agency.domain.Country;
 import com.epam.agency.repository.IRepository;
@@ -25,8 +25,8 @@ import java.util.List;
 
 @Repository
 @Qualifier("countryRepository")
-public class CountryRepository implements IRepository<Country> {
-    private final static Logger LOGGER = LoggerFactory.getLogger(CountryRepository.class);
+public class CountryRepositoryJdbc implements IRepository<Country> {
+    private final static Logger LOGGER = LoggerFactory.getLogger(CountryRepositoryJdbc.class);
     private final static String FIND_ALL_COUNTRIES = "SELECT c.id,c.name FROM country c";
     private final static String FIND_COUNTRY_BY_ID = "SELECT c.id,c.name FROM country c WHERE c.id=?";
     private final static String DELETE_COUNTRY = "DELETE FROM country WHERE id=?";
@@ -62,7 +62,7 @@ public class CountryRepository implements IRepository<Country> {
     }
 
     @Override
-    public Country findById(int id) {
+    public Country findById(Long id) {
         LOGGER.info("find country by id ");
         Country country = jdbcTemplate.queryForObject(FIND_COUNTRY_BY_ID, new Object[]{id}, new BeanPropertyRowMapper<>(Country.class));
         return country;

@@ -1,7 +1,7 @@
 package com.epam.agency.service.impl;
 
 import com.epam.agency.domain.Hotel;
-import com.epam.agency.repository.impl.HotelRepository;
+import com.epam.agency.repository.jpa.HotelRepository;
 import com.epam.agency.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,7 +44,7 @@ public class HotelService implements IService<Hotel> {
     }
 
     @Override
-    public Hotel findById(int id) {
+    public Hotel findById(Long id) {
         return hotelRepository.findById(id);
     }
 }

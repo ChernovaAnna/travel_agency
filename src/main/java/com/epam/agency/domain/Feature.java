@@ -17,7 +17,7 @@ public enum Feature {
     COMPLIMENTARY_WIFI("complimentary wifi"),
     BEAUTY_SALON_AND_SPA("beauty salon and spa"),
     KIDS_CLUB("kids club"),
-    BABYSITTING_SERVICE("babysitting services"),
+    BABYSITTING_SERVICE("babysitting service"),
     ROOM_SERVICE("room service"),
     SELF_PARKING("self parking"),
     BUSINESS_CENTER("business center"),

@@ -1,6 +1,7 @@
 package com.epam.agency.service;
 
 import com.epam.agency.domain.Identifier;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -12,7 +13,8 @@ import java.util.List;
  * @version 1.0
  */
 
-public interface IService <T extends Identifier> {
+@Service
+public interface IService<T extends Identifier> {
     /**
      * Create entity in the repository.
      *
@@ -35,7 +37,6 @@ public interface IService <T extends Identifier> {
     void delete(T entity);
 
     /**
-     *
      * @return all entities from concrete repository
      */
     List<T> findAll();
@@ -46,5 +47,5 @@ public interface IService <T extends Identifier> {
      * @param id of entity
      * @return entity with corresponding id
      */
-    T findById(int id);
+    T findById(Long id);
 }

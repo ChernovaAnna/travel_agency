@@ -1,7 +1,7 @@
 package com.epam.agency.service.impl;
 
 import com.epam.agency.domain.Tour;
-import com.epam.agency.repository.impl.TourRepository;
+import com.epam.agency.repository.jpa.TourRepository;
 import com.epam.agency.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,7 +44,7 @@ public class TourService implements IService<Tour> {
     }
 
     @Override
-    public Tour findById(int id) {
+    public Tour findById(Long id) {
         return tourRepository.findById(id);
     }
 }

@@ -2,7 +2,7 @@ package com.epam.agency.repository;
 
 import com.epam.agency.config.TestConfig;
 import com.epam.agency.domain.Client;
-import com.epam.agency.repository.impl.ClientRepository;
+import com.epam.agency.repository.jpa.ClientRepository;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,7 +35,7 @@ public class ClientRepositoryTest {
     public void init() {
         MockitoAnnotations.initMocks(this);
         context = new AnnotationConfigApplicationContext();
-        context.getEnvironment().setActiveProfiles("development");
+        context.getEnvironment().setActiveProfiles("development","jpaRepository");
         ((AnnotationConfigApplicationContext) context).register(TestConfig.class);
         context.refresh();
         clientRepository = (ClientRepository) context.getBean("clientRepository");
@@ -50,8 +50,8 @@ public class ClientRepositoryTest {
     @Test
     public void testCreateClient() {
         clientRepository.create((Client) context.getBean("clientForAdd"));
-        assertThat(clientRepository.findById(4), is(notNullValue()));
-        assertThat(clientRepository.findById(4).getLogin(), is("client"));
+        assertThat(clientRepository.findById(4L), is(notNullValue()));
+        assertThat(clientRepository.findById(4L).getLogin(), is("client"));
     }
 
     @Test
@@ -59,9 +59,9 @@ public class ClientRepositoryTest {
         Client client = (Client) (context.getBean("clientForUpdate"));
         client.setPassword("newPassword");
         clientRepository.update(client);
-        assertThat(clientRepository.findById(2), is(notNullValue()));
-        assertThat(clientRepository.findById(2).getLogin(), is("iubsdall1"));
-        assertThat(clientRepository.findById(2).getPassword(), is("newPassword"));
+        assertThat(clientRepository.findById(2L), is(notNullValue()));
+        assertThat(clientRepository.findById(2L).getLogin(), is("iubsdall1"));
+        assertThat(clientRepository.findById(2L).getPassword(), is("newPassword"));
     }
 
     @Test
@@ -79,7 +79,7 @@ public class ClientRepositoryTest {
 
     @Test
     public void testFindClientById() {
-        Client client = clientRepository.findById(2);
+        Client client = clientRepository.findById(2L);
         assertThat(client.getLogin(), is("iubsdall1"));
         assertThat(client.getPassword(), is("eandersen1"));
 

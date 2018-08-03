@@ -1,4 +1,5 @@
-package com.epam.agency.repository.impl;
+package com.epam.agency.repository.jdbc;
+
 import com.epam.agency.domain.Review;
 import com.epam.agency.repository.IRepository;
 import com.epam.agency.repository.mapper.ReviewMapper;
@@ -25,23 +26,23 @@ import java.util.List;
 
 @Repository
 @Qualifier("reviewRepository")
-public class ReviewRepository implements IRepository<Review> {
-    private final static Logger LOGGER = LoggerFactory.getLogger(ReviewRepository.class);
+public class ReviewRepositoryJdbc implements IRepository<Review> {
+    private final static Logger LOGGER = LoggerFactory.getLogger(ReviewRepositoryJdbc.class);
     private final static String FIND_ALL_REVIEWS = "SELECT r.id,r.date AS review_date,r.text,t.id AS tour_id, t.photo,t.date AS tour_date,t.duration,t.description, " +
             "t.cost,t.tour_type,c.id AS country_id," +
             " c.name AS country_name,h.id AS hotel_id,h.name AS hotel_name,h.stars,h.website,h.lalitude,h.longitude,h.features, " +
-            "cl.id AS client_id, cl.login,cl.password "+
-            "FROM review r JOIN client cl ON r.client_id=cl.id "+
-            "JOIN tour t ON r.tour_id=t.id "+
-            "JOIN hotel h ON t.hotel_id = h.id "+
+            "cl.id AS client_id, cl.login,cl.password " +
+            "FROM review r JOIN client cl ON r.client_id=cl.id " +
+            "JOIN tour t ON r.tour_id=t.id " +
+            "JOIN hotel h ON t.hotel_id = h.id " +
             "JOIN country c ON t.country_id=c.id";
     private final static String FIND_REVIEW_BY_ID = "SELECT r.id,r.date AS review_date,r.text,t.id AS tour_id, t.photo,t.date AS tour_date,t.duration,t.description, " +
             "t.cost,t.tour_type,c.id AS country_id," +
             " c.name AS country_name,h.id AS hotel_id,h.name AS hotel_name,h.stars,h.website,h.lalitude,h.longitude,h.features, " +
-            "cl.id AS client_id, cl.login,cl.password "+
-            "FROM review r JOIN client cl ON r.client_id=cl.id "+
-            "JOIN tour t ON r.tour_id=t.id "+
-            "JOIN hotel h ON t.hotel_id = h.id "+
+            "cl.id AS client_id, cl.login,cl.password " +
+            "FROM review r JOIN client cl ON r.client_id=cl.id " +
+            "JOIN tour t ON r.tour_id=t.id " +
+            "JOIN hotel h ON t.hotel_id = h.id " +
             "JOIN country c ON t.country_id=c.id WHERE r.id=?";
     private static final String DELETE_REVIEW = "DELETE FROM review WHERE id=?";
     private static final String ADD_REVIEW = "INSERT INTO review (date,text,client_id,tour_id) VALUES (?,?,?,?)";
@@ -59,7 +60,7 @@ public class ReviewRepository implements IRepository<Review> {
     @Override
     public void update(Review entity) {
         LOGGER.info("update review");
-        jdbcTemplate.update(UPDATE_REVIEW, Date.valueOf(entity.getDate()), entity.getText(), entity.getClient().getId(), entity.getTour().getId(),entity.getId());
+        jdbcTemplate.update(UPDATE_REVIEW, Date.valueOf(entity.getDate()), entity.getText(), entity.getClient().getId(), entity.getTour().getId(), entity.getId());
 
     }
 
@@ -77,7 +78,7 @@ public class ReviewRepository implements IRepository<Review> {
     }
 
     @Override
-    public Review findById(int id) {
+    public Review findById(Long id) {
         LOGGER.info("find review by id");
         Review review = jdbcTemplate.queryForObject(FIND_REVIEW_BY_ID, new Object[]{id}, new ReviewMapper());
         return review;

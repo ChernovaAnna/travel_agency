@@ -1,6 +1,6 @@
-package com.epam.agency.repository.impl;
+package com.epam.agency.repository.jdbc;
 
-import com.epam.agency.domain.*;
+import com.epam.agency.domain.Hotel;
 import com.epam.agency.repository.IRepository;
 import com.epam.agency.repository.mapper.HotelMapper;
 import org.slf4j.Logger;
@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.util.*;
+import java.util.List;
 
 /**
  * Implements IRepository interface and
@@ -22,11 +22,10 @@ import java.util.*;
  * Description of methods:
  * @see IRepository
  */
-
 @Repository
 @Qualifier("hotelRepository")
-public class HotelRepository implements IRepository<Hotel> {
-    private final static Logger LOGGER = LoggerFactory.getLogger(HotelRepository.class);
+public class HotelRepositoryJdbc implements IRepository<Hotel> {
+    private final static Logger LOGGER = LoggerFactory.getLogger(HotelRepositoryJdbc.class);
     private final static String FIND_ALL_HOTELS = "SELECT h.id,h.name,h.stars,h.website,h.lalitude,h.longitude,h.features FROM hotel h";
     private final static String FIND_HOTEL_BY_ID = "SELECT h.id,h.name,h.stars,h.website,h.lalitude,h.longitude,h.features FROM hotel h WHERE id=?";
     private static final String DELETE_HOTEL = "DELETE FROM hotel WHERE id=?";
@@ -53,7 +52,7 @@ public class HotelRepository implements IRepository<Hotel> {
         entity.getFeature().forEach(item -> {
             feature.append((item).getValue()).append(",");
         });
-        jdbcTemplate.update(UPDATE_HOTEL, entity.getName(), entity.getStars(), entity.getWebsite(), entity.getLalitude(), entity.getLongitude(), feature.toString(),entity.getId());
+        jdbcTemplate.update(UPDATE_HOTEL, entity.getName(), entity.getStars(), entity.getWebsite(), entity.getLalitude(), entity.getLongitude(), feature.toString(), entity.getId());
 
     }
 
@@ -71,7 +70,7 @@ public class HotelRepository implements IRepository<Hotel> {
     }
 
     @Override
-    public Hotel findById(int id) {
+    public Hotel findById(Long id) {
         LOGGER.info("find hotel by id");
         Hotel hotel = jdbcTemplate.queryForObject(FIND_HOTEL_BY_ID, new Object[]{id}, new HotelMapper());
         return hotel;

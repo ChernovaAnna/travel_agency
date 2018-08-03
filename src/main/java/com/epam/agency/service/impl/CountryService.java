@@ -1,7 +1,7 @@
-package com.epam.agency.service.impl;
+package com.epam.agency.service.jpa;
 
 import com.epam.agency.domain.Country;
-import com.epam.agency.repository.impl.CountryRepository;
+import com.epam.agency.repository.jpa.CountryRepository;
 import com.epam.agency.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,7 +44,7 @@ public class CountryService implements IService<Country> {
     }
 
     @Override
-    public Country findById(int id) {
+    public Country findById(Long id) {
         return countryRepository.findById(id);
     }
 }

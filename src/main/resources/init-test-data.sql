@@ -3,7 +3,7 @@ INSERT INTO client  VALUES (1,'opile0', 'bharbert0');
 INSERT INTO client  VALUES (2,'iubsdall1', 'eandersen1');
 INSERT INTO client  VALUES (3,'mstrewther2', 'mdykas2');
 
---INSERT INTO country (name) VALUES ('Ireland');
+--to fill agency.country table
 INSERT INTO country VALUES (1,'China');
 INSERT INTO country VALUES (2,'China');
 INSERT INTO country VALUES (3,'Nigeria');

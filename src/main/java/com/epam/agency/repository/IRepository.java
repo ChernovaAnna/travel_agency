@@ -1,6 +1,7 @@
 package com.epam.agency.repository;
 
 import com.epam.agency.domain.Identifier;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * @version 1.0
  */
 
+@Repository
 public interface IRepository <T extends Identifier> {
     /**
      * Create entity in the repository.
@@ -46,6 +48,6 @@ public interface IRepository <T extends Identifier> {
      * @param id of entity
      * @return entity with corresponding id
      */
-    T findById(int id);
+    T findById(Long id);
 
 }
