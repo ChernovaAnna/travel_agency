@@ -1,5 +1,5 @@
 --to fill agency.client table
-INSERT INTO client  VALUES (1,'admin', 'admin','ADMIN');
+INSERT INTO client  VALUES (1,'admin', '$2a$04$1oYw2scM8.sEdvrOl9gHxux2A2pBOMJ1fWfdaHF86lQ8L6anXciJK','ADMIN');
 INSERT INTO client  VALUES (2,'user', 'user','MEMBER');
 INSERT INTO client  VALUES (3,'anya', 'anya', 'MEMBER');
 

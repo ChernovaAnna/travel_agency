@@ -12,7 +12,8 @@ public enum PageName {
     TOURS("tours"),
     REVIEWS("reviews"),
     HOTELS("hotels"),
-    COUNTRIES("countries");
+    COUNTRIES("countries"),
+    ERROR("error");
 
     private String value;
 }

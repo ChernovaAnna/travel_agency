@@ -1,15 +1,12 @@
 package com.epam.agency.controller;
 
-import com.epam.agency.domain.Client;
 import com.epam.agency.domain.Tour;
 import com.epam.agency.service.ClientService;
 import com.epam.agency.service.TourService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -55,6 +52,5 @@ public class TourController {
 ////        model.addAttribute("userTours", client.getTours());
 //        return USER_TOURS;
 //    }
-
 
 }
