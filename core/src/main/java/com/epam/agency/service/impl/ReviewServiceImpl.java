@@ -1,6 +1,7 @@
 package com.epam.agency.service.impl;
 
 import com.epam.agency.domain.Review;
+import com.epam.agency.domain.Tour;
 import com.epam.agency.exception.BusinessException;
 import com.epam.agency.exception.type.BusinessExceptionCode;
 import com.epam.agency.repository.ReviewRepository;
@@ -55,4 +56,15 @@ public class ReviewServiceImpl implements ReviewService {
     public Review findById(Long id) {
         return reviewRepository.findById(id).orElseThrow(() -> new BusinessException(BusinessExceptionCode.REVIEW_NOT_FOUND));
     }
+
+    @Override
+    public List<Review> findByTourId(Tour tour) {
+        List<Review> reviews = Lists.newArrayList(reviewRepository.findReviewsByTour(tour));
+        if (reviews.isEmpty()) {
+            throw new BusinessException(BusinessExceptionCode.NO_REVIEWS_FOUND);
+        }
+        return reviews;
+    }
+
+
 }

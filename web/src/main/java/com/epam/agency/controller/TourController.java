@@ -18,7 +18,6 @@ public class TourController {
 
     private ClientService clientService;
 
-    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping(value = "/tours")
     public String findAllTours(HttpServletRequest request) {
         List<Tour> tours = tourService.findAll();

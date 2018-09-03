@@ -11,7 +11,7 @@ public interface ClientService {
      *
      * @param client
      */
-    void create(Client client);
+    Client create(Client client);
 
     /**
      * Update client from the repository.
@@ -41,7 +41,5 @@ public interface ClientService {
     Client findById(Long id);
 
     Client findByLogin(String login);
-
-    Client findByLoginAndPassword(String login, String password);
 
 }

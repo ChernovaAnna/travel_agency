@@ -4,6 +4,8 @@ import com.epam.agency.domain.Tour;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
+
 /**
  * Generic interface provide CRUD methods
  * for concrete repository realizations.
@@ -13,5 +15,7 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository("tourRepository")
+@Transactional
 public interface TourRepository extends CrudRepository<Tour, Long> {
+
 }

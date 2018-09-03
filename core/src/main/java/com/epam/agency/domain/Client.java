@@ -1,12 +1,9 @@
 package com.epam.agency.domain;
 
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.*;
 import org.dom4j.tree.AbstractEntity;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  * Stores information about clients.
@@ -19,6 +16,8 @@ import java.util.List;
 @Table(name = "client")
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode
 public class Client extends AbstractEntity {
 
     /**
@@ -31,16 +30,14 @@ public class Client extends AbstractEntity {
     /**
      * List of tours visited by the client
      */
-    @ManyToMany(cascade = {CascadeType.ALL})
-    @JoinTable(
-            name = "client_tour",
-            joinColumns = {@JoinColumn(name = "client_id")},
-            inverseJoinColumns = {@JoinColumn(name = "tour_id")}
-    )
-    private List<Tour> tours;
+//    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+//    @JoinTable(name = "client_tour", joinColumns = @JoinColumn(name = "client_id",
+//            referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "tour_id",
+//            referencedColumnName = "id"))
+//    private List<Tour> tours;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "client", cascade = CascadeType.ALL)
-    private List<Review> reviews;
+//    @OneToMany(fetch = FetchType.EAGER, mappedBy = "review", cascade = CascadeType.ALL)
+//    private List<Review> reviews;
 
     /**
      * Client's login

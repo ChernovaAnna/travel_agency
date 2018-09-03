@@ -28,8 +28,8 @@ public class ClientServiceImpl implements ClientService {
     private ClientRepository clientRepository;
 
     @Override
-    public void create(Client client) {
-        clientRepository.save(client);
+    public Client create(Client client) {
+       return clientRepository.save(client);
     }
 
     @Override
@@ -61,8 +61,4 @@ public class ClientServiceImpl implements ClientService {
         return clientRepository.findByLogin(login).orElseThrow(() -> new BusinessException(BusinessExceptionCode.USER_NOT_FOUND));
     }
 
-    @Override
-    public Client findByLoginAndPassword(String login, String password) {
-        return clientRepository.findByLoginAndPassword(login, password).orElseThrow(() -> new BusinessException(BusinessExceptionCode.USER_NOT_FOUND));
-    }
 }

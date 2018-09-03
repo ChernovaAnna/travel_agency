@@ -29,31 +29,30 @@
     margin: auto;">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title"><@spring.message "label.signing"/></h4>
+                <h4 class="modal-title"><@spring.message "label.signuping"/></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                     <span></span><span></span>
                 </button>
             </div>
-            <form class="form-signin" action="/sign_in" method="post">
+            <form class="form-signup" action="/sign_up" method="post">
                 <div class="modal-body">
 
-                    <input type="text" id="signinLogin" name="login" class="form-control"
+                    <input type="text" id="signupLogin" name="login" class="form-control"
                            placeholder="<@spring.message 'label.login'/>"
                             required autofocus autocomplete="off" style="margin-top: 20px;margin-bottom: 20px">
 
 
-                    <input type="password" id="signinPassword" name="password" class="form-control"
+                    <input type="password" id="signupPassword" name="password" class="form-control"
                            placeholder="<@spring.message 'label.password'/>"
                            required autocomplete="off style="margin-top: 20px;margin-bottom: 20px">
                     <div class="checkbox">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="uui-button lime-green"><@spring.message 'label.signin'/></button>
+                    <button type="submit" class="uui-button lime-green"><@spring.message 'label.signup'/></button>
                 </div>
             </form>
         </div>
-
     </div>
 </div>
 </body>

@@ -20,7 +20,7 @@
                         <span class="logo">
                             <img src="/images/ic_logo_UUi.svg" alt=""/>
                         </span>
-                        <span class="title">TRAVEL AGENCY</span>
+                        <span class="title"><a href="/home">TRAVEL AGENCY</a></span>
                     </a>
                 </div>
                 <div class="responsive-menu">
@@ -28,25 +28,20 @@
                         <div class="menu-scroll">
                             <ul class="nav navbar-nav">
                                 <li><a href="#"><span><@spring.message "label.tours"/></span></a></li>
-                                <li><a href="#"><span><@spring.message "label.reviews"/></span></a></li>
-                                <li><a href="#"><span><@spring.message "label.hotels"/></span></a></li>
-
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <!---->
-            <a href="#" class="brand-logo">
+            <a href="/home" class="brand-logo">
                 <span class="logo">
                     <img src="/resources/uui/images/ic_logo_UUi.svg" alt=""/>
                 </span>
-                Travel Agency
+              Travel Agency
             </a>
             <ul class="uui-navigation nav navbar-nav">
                 <li><a href="/tours"><@spring.message "label.tours"/></a></li>
-                <li><a href="#"><@spring.message "label.reviews"/></a></li>
-                <li><a href="/hotels"><@spring.message "label.hotels"/></a></li>
             </ul>
                     <#if user??&&user.role.name()=="MEMBER">
                             <ul class="uui-header-tools nav navbar-nav">
@@ -62,7 +57,7 @@
                                             <li><a href="#"><@spring.message "label.mytours"/></a></li>
                                             <li><a href="#"><@spring.message "label.myreviwes"/></a></li>
                                             <li><a href="#"><@spring.message "label.myprofile"/></a></li>
-                                            <li class="logout"><a href="#"><i class="fa fa-sign-out"></i><@spring.message "label.signout"/></a></li>
+                                            <li class="logout"><a href="/sign_out"><i class="fa fa-sign-out"></i><@spring.message "label.signout"/></a></li>
                                         </ul>
                                     </div>
                                 </li>

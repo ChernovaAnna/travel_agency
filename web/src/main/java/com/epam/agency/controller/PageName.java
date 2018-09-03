@@ -9,6 +9,7 @@ public enum PageName {
     HOME("home"),
     REDIRECT("redirect:/"),
     SIGN_IN("sign_in"),
+    SIGN_UP("sign_up"),
     TOURS("tours"),
     REVIEWS("reviews"),
     HOTELS("hotels"),

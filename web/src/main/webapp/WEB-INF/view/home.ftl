@@ -27,7 +27,7 @@
     <div id="slider-wrap">
         <div id="slider">
             <div class="internal">
-                <div class="slide"><img src="https://unsplash.it/2000/1250?image=675" alt="Third Image"></div>
+                <div class="slide"><img src="/resources/image/back.jpg" alt="Third Image"></div>
             </div>
         </div>
     </div>

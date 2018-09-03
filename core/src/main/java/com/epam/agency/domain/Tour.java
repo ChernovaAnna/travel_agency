@@ -76,10 +76,4 @@ public class Tour extends AbstractEntity {
     @JoinColumn(name = "country_id")
     @NonNull
     private Country country;
-
-    /**
-     * List of clients which have chosen the tour
-     */
-    @ManyToMany(mappedBy = "tours")
-    private List<Client> clients;
 }

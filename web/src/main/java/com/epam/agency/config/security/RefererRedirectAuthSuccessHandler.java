@@ -19,9 +19,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-/**
- * The type Referer redirect auth success handler.
- */
 @Component
 public class RefererRedirectAuthSuccessHandler extends SimpleUrlAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
     private static final Logger LOGGER = LogManager.getLogger(RefererRedirectAuthSuccessHandler.class);
@@ -36,10 +33,9 @@ public class RefererRedirectAuthSuccessHandler extends SimpleUrlAuthenticationSu
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         super.onAuthenticationSuccess(request, response, authentication);
-        final HttpSession session = request.getSession();
         UserDetails principal = (UserDetails) authentication.getPrincipal();
         Client user = service.findByLogin(principal.getUsername());
-        session.setAttribute("user", user);
+        request.getSession().setAttribute("user", user);
         if (response.isCommitted()) {
             LOGGER.debug("Response has already been committed.");
             return;

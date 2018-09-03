@@ -4,6 +4,7 @@ import com.epam.agency.domain.Client;
 import com.epam.agency.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -34,6 +35,6 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
         Client client = clientService.findByLogin(login);
         List<SimpleGrantedAuthority> authorities = Collections.singletonList(new SimpleGrantedAuthority(client.getRole().toString()));
-        return new org.springframework.security.core.userdetails.User(client.getLogin(), client.getPassword(), authorities);
+        return new User(client.getLogin(), client.getPassword(), authorities);
     }
 }

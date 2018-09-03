@@ -1,6 +1,7 @@
 package com.epam.agency.service;
 
 import com.epam.agency.domain.Review;
+import com.epam.agency.domain.Tour;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -41,4 +42,5 @@ public interface ReviewService {
      */
     Review findById(Long id);
 
+    List<Review> findByTourId(Tour tour);
 }

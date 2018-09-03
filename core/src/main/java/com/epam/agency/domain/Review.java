@@ -40,6 +40,7 @@ public class Review extends AbstractEntity {
     /**
      * The Author of review
      */
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "client_id")
     @NonNull
     private Client client;
@@ -47,6 +48,7 @@ public class Review extends AbstractEntity {
     /**
      * Tour to which the review was written
      */
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "tour_id")
     @NonNull
     private Tour tour;
